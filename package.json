@@ -4,7 +4,8 @@
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "install": "electron-rebuild"
   },
   "repository": "https://github.com/mfalfafa/electron-serialport",
   "keywords": [
@@ -18,6 +19,9 @@
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^2.0.0",
+    "electron-rebuild": "^1.4.0"
+  },
+  "dependencies": {
     "serialport": "^4.0.7"
   }
 }
