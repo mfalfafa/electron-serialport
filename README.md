@@ -19,7 +19,7 @@ How to use :
 2. Install electron :
 	"sudo npm install -g electron --unsafe-perm=true --allow-root"
 3. Install electron-packager
-	"npm install electron-packager --save-dev"
+	"sudo npm install electron-packager --save-dev"
 4. goto the "electron-serialport" directory, and run :
 	"npm install"
 5. run this : "electron-builder ."
