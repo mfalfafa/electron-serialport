@@ -34,6 +34,7 @@ port.on('open', function () {
 //will be executed if there is a serial data on a stream (receiving serial data)
 port.on('data', function (data) {
   console.log(data.toString());
+  document.getElementById('ports').innerHTML =data.toString();
   // fs.appendFile('serial_data.txt', data.toString(), function(err){
   //   if(err) throw err;
   //   // console.log('saved');
