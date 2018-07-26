@@ -22,7 +22,7 @@ How to use :
 	"sudo npm install electron-packager --save-dev"
 4. goto the "electron-serialport" directory, and run :
 	"npm install"
-5. run this : "electron-builder ."
+5. run this : "electron-packager ."
 6. goto "electron-serialport-linux-armv7|" directory
 7. execute "electron-serialport"
 8. Trying to send serial data to ttyAMA0 serial port raspi
