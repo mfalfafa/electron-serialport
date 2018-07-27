@@ -26,3 +26,7 @@ How to use :
 6. goto "electron-serialport-linux-armv7|" directory
 7. execute "electron-serialport"
 8. Trying to send serial data to ttyAMA0 serial port raspi
+9. To make your program start automatically, type this command :
+	- "sudo nano /etc/profile". Add below code at the bottom of profile file :
+	- "sudo /home/pi/your-app-dir/electron-serialport"
+	- "sudo reboot now", and your app is autorun after booting.
