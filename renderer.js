@@ -36,7 +36,7 @@ var data_='';
 port.on('data', function (data) {
   console.log(data.toString());
   data_=data_+data;
-  if (data == '\n'){
+  if (data == '\r'){
     document.getElementById('ports').innerHTML =data.toString();
     data_='';
   }
