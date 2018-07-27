@@ -9,10 +9,10 @@ var SerialPort = require('serialport');
 // var fs = require('fs');
 
 // Serial port settings
-var port = new SerialPort('/dev/ttyAMA0', { 
-  baudRate: 19200,
+var port = new SerialPort('/dev/ttyAMA0', { //Can use /dev/ttyUSB0-/dev/ttyUSB3, /dev/ttyS0 
+  baudRate: 19200,  //9600
   dataBits: 8,
-  parity: 'odd',
+  parity: 'odd',    //none
   stopBits: 1,
   rtscts: false,
   xon: false,
@@ -32,9 +32,14 @@ port.on('open', function () {
 });
 
 //will be executed if there is a serial data on a stream (receiving serial data)
+var data_='';
 port.on('data', function (data) {
   console.log(data.toString());
-  document.getElementById('ports').innerHTML =data.toString();
+  data_=data_+data;
+  if (data == '\n'){
+    document.getElementById('ports').innerHTML =data.toString();
+    data_='';
+  }
   // fs.appendFile('serial_data.txt', data.toString(), function(err){
   //   if(err) throw err;
   //   // console.log('saved');
